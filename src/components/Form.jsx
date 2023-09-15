@@ -43,7 +43,7 @@ const Form = () => {
         <div className='container mt-3' >
             <h1>Form</h1>
             <div className="col-md-12 d-flex justify-content-end  align-items-center mb-3">
-                {stepCount !== 1 ? <button className='btn btn-primary ' type='button' onClick={prevHandler} >prev</button> : null}
+                {stepCount !== 1 ? <button className='button-56' type='button' onClick={prevHandler} > ← Prev</button> : null}
 
                 <h4 className='mx-3 m-0' > {stepCount}/3 </h4>
             </div>
@@ -138,7 +138,7 @@ const Form = () => {
                                         </div>
                                     </div>
                                 </div>
-                                {stepCount === 3 ? null : <button className='btn btn-primary' type='button' disabled={errors.address || errors.username || errors.email || errors.city || errors.town || values.username === ""} onClick={nextHandler}  > next </button>}
+                                {stepCount === 3 ? null : <button className='button-56' type='button' disabled={errors.address || errors.username || errors.email || errors.city || errors.town || values.username === ""} onClick={nextHandler}  > Next → </button>}
 
                             </div> : null}
 
@@ -189,7 +189,7 @@ const Form = () => {
                                     </div>
 
                                 </div>
-                                {stepCount === 3 ? null : <button className='btn btn-primary' type='button' disabled={errors.linkedin || values.linkedin === ""} onClick={nextHandler}  > next </button>}
+                                {stepCount === 3 ? null : <button className='button-56' type='button' disabled={errors.linkedin || values.linkedin === ""} onClick={nextHandler}  > Next → </button>}
                             </div> : null}
 
                         {/* STEP 3  */}
@@ -265,10 +265,10 @@ const Form = () => {
 
 
                                 </div>
-                                {stepCount === 3 ? null : <button className='btn btn-primary' type='button' disabled={errors.address || errors.username || errors.email || errors.city || errors.town || values.salary === ""} onClick={nextHandler}  > next </button>}
+                                {stepCount === 3 ? null : <button className='button-56' type='button' disabled={errors.address || errors.username || errors.email || errors.city || errors.town || values.salary === ""} onClick={nextHandler}  > Next → </button>}
 
                             </div> : null}
-                        {stepCount === 3 ? <button className='btn btn-primary' type="submit" disabled={isSubmitting}>
+                        {stepCount === 3 ? <button className='button-56' type="submit" disabled={isSubmitting}>
                             Submit
                         </button> : null}
 
@@ -276,6 +276,13 @@ const Form = () => {
                     </form>
                 )}
             </Formik>
+
+            {/* <div className="row mt-5">
+                <div className="col-md-4">
+                    <button className='button-56' > Next! </button>
+                </div>
+
+            </div> */}
 
         </div>
     )
